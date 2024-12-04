@@ -6,11 +6,13 @@ import EmployeeDashbord from "./pages/EmployeeDashbord.jsx";
 import Privateroutes from "./utils/Privateroutes.jsx";
 import RolebasedRoutes from "./utils/RolebasedRoutes.jsx";
 import Summary from "./components/Summary.jsx";
-import Department from "./components/departments/Department.jsx";
 import Employee from "./components/employee/Employee.jsx";
 import Leave from "./components/leave/Leave.jsx";
 import Salary from "./components/salary/Salary.jsx";
 import Settings from "./components/settings/Settings.jsx";
+import DepartmentList from "./components/departments/DepartmentList.jsx";
+import AddDepartment from "./components/departments/AddDepartment.jsx";
+import EditDepartment from "./components/departments/EditDepartment.jsx";
 
 function App() {
   return (
@@ -35,11 +37,12 @@ function App() {
   >
     {/* Nested Routes */}
     <Route index element={<Summary />} />
-    <Route path="department" element={<Department />} />
+    <Route path="department" element={<DepartmentList />} />
+
+    <Route path="add-department" element={<AddDepartment />} />
+    <Route path="department/edit/:id" element={<EditDepartment />} />
     <Route path="employee" element={<Employee />} />
-    <Route path="leave" element={<Leave />} />
-    <Route path="salary" element={<Salary />} />
-    <Route path="settings" element={<Settings />} />
+    
   </Route>
 
         {/* Employee Dashboard - Private and Role-Based Access */}

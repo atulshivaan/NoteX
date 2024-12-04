@@ -46,33 +46,7 @@ const Sidebar = () => {
           <FaBuilding />
           <span>Department</span>
         </NavLink>
-        <NavLink
-          to="/admin-dashbord/leave"
-          className={({ isActive }) =>
-            `${isActive ? "bg-red-400" : ""} flex items-center space-x-4  py-2.5 px-4 rounded`
-          }
-        >
-          <FaCalendar />
-          <span>Leave</span>
-        </NavLink>
-        <NavLink
-          to="/admin-dashbord/salary"
-          className={({ isActive }) =>
-            `${isActive ? "bg-red-400" : ""} flex items-center space-x-4  py-2.5 px-4 rounded`
-          }
-        >
-          <FaMoneyBillWave />
-          <span>Salary</span>
-        </NavLink>
-        <NavLink
-          to="/admin-dashbord/settings"
-          className={({ isActive }) =>
-            `${isActive ? "bg-red-400" : ""} flex items-center space-x-4 py-2.5 px-4 rounded`
-          }
-        >
-          <FaCogs />
-          <span>Settings</span>
-        </NavLink>
+       
       </div>
     </div>
   );

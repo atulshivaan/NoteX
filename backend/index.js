@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { connectDB } from "./database/connectDB.js";
 import cors from "cors"
 import authRouter from "./routes/authroute.js";
+import deparmentRouter from "./routes/departmentRoutes.js";
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.get("/", (req, res) => {
 
 //routes
 app.use("/api/auth",authRouter);
+app.use("/api/department",deparmentRouter);
 const port = process.env.PORT;
 app.listen(port, (req, res) => {
   connectDB();

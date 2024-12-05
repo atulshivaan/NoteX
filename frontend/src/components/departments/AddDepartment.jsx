@@ -10,11 +10,12 @@ const AddDepartment = () => {
   })
   const navigate = useNavigate();
 
-  const handleChange =(e)=>{
+const handleChange =(e)=>{
 const {name , value }= e.target;
 setDepartment({...department ,[name]:value})
   }
-  const handleSubmit =async(e)=>{
+
+const handleSubmit =async(e)=>{
     e.preventDefault();
     try {
       const response= await axios.post("http://localhost:4040/api/department/add",department,{

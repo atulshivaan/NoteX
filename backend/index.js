@@ -4,6 +4,7 @@ import { connectDB } from "./database/connectDB.js";
 import cors from "cors"
 import authRouter from "./routes/authroute.js";
 import deparmentRouter from "./routes/departmentRoutes.js";
+import employeeRouter from "./routes/employeeRoute.js";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(
 );
 app.use(express.json())
 
+
 app.get("/", (req, res) => {
   res.send("baby");
 });
@@ -25,6 +27,7 @@ app.get("/", (req, res) => {
 //routes
 app.use("/api/auth",authRouter);
 app.use("/api/department",deparmentRouter);
+app.use("/api/employee",employeeRouter)
 const port = process.env.PORT;
 app.listen(port, (req, res) => {
   connectDB();

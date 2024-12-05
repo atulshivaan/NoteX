@@ -72,7 +72,7 @@ setfilterDepartments(recored)
           <div className="flex justify-between items-center mb-4">
             <input
               type="text"
-              placeholder="Search by department name"
+              placeholder="Search "
               className="px-4 py-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
               onChange={filterDep}
             />

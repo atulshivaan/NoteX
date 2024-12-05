@@ -20,7 +20,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/notex-employee-management.git
+git clone https://github.com/atulshivaan/notex-employee-management.git
 cd notex-employee-management
 Install the required dependencies:
 
@@ -65,20 +65,26 @@ npm start
 The frontend will be running on http://localhost:5173.
 
 API Endpoints
+
 Authentication
 POST /api/auth/login: Login for users (Admin/Employee).
 POST /api/auth/register: Register a new user (Admin only).
+
 Department Management (Admin Only)
+
 GET /api/department: Get all departments.
 POST /api/department: Add a new department.
 PUT /api/department/:id: Edit a department by ID.
 DELETE /api/department/:id: Delete a department by ID.
+
 Employee Management (Admin Only)
+
 GET /api/employee: Get all employees.
 POST /api/employee: Add a new employee.
 GET /api/employee/:id: Get details of a specific employee by ID.
 PUT /api/employee/:id: Edit employee details by ID.
 DELETE /api/employee/:id: Delete employee by ID.
+
 Private Routes (Access Control)
 Privateroutes component ensures that only authenticated users can access the dashboard.
 RolebasedRoutes component restricts access to certain pages based on user roles (Admin/Employee).
